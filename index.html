@@ -1527,6 +1527,21 @@
         playNext();
       }
     });
+    
+<!-- Tu reproductor e inputs de archivos van aquí -->
+
+  <script>
+    // Tu código JavaScript actual para reproducir música va aquí
+
+    // REGISTRO DEL SERVICE WORKER (Añade esto al final)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker listo'))
+          .catch(err => console.log('Error:', err));
+      });
+    }
+    
   </script>
 </body>
 </html>
