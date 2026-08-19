@@ -783,6 +783,23 @@
       <ul class="playlist-list" id="playlistContainer"></ul>
     </div>
   </div>
+  
+  
+  <!-- Estructura del Aviso (Meow Privacy Modal) -->
+<div id="meow-aviso-privacidad" class="meow-modal-fondo">
+  <div class="meow-modal-tarjeta">
+    <div class="meow-modal-icono">🐈‍⬛</div>
+    <h2>¡Aviso de privacidad gatuna!</h2>
+    <p>Los archivos de música siempre se ejecutan <strong>localmente en tu dispositivo</strong>. No se envían a ningún servidor externo.</p>
+    
+    <label class="meow-modal-opcion">
+      <input type="checkbox" id="meow-check-no-mostrar"> No volver a mostrar
+    </label>
+    
+    <button class="meow-modal-boton" onclick="meowCerrarAviso()">Entendido</button>
+  </div>
+</div>
+
 
   <audio id="audio" preload="auto" playsinline></audio>
 
