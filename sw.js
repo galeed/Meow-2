@@ -1,3 +1,12 @@
+self.addEventListener('fetch', (event) => {
+  // Evitar que el Service Worker interfiera con blobs locales de música o peticiones parciales de audio
+  if (event.request.url.startsWith('blob:') || event.request.headers.get('range')) {
+    return; // Deja que el navegador maneje el archivo local de forma nativa
+  }
+
+  // Tu lógica actual de caché para index.html, estilos y temas va aquí abajo...
+});
+
 const CACHE_NAME = 'reproductor-unico-v1';
 const ASSETS = [
   './',
